@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перевірка функції getShippingMessage</title>
+</head>
+<body>
+    <script>
+        function getShippingMessage(country, price, deliveryFee) {
+            const totalPrice = price + deliveryFee;
+            return `Shipping to ${country} will cost ${totalPrice} credits`;
+        }
+
+        // Приклад виклику функції для перевірки
+        console.log(getShippingMessage("Ukraine", 100, 20)); // "Shipping to Ukraine will cost 120 credits"
+    </script>
+</body>
+</html>

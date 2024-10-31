@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перевірка функції makeTransaction</title>
+</head>
+<body>
+    <script>
+        function makeTransaction(quantity, pricePerDroid, customerCredits) {
+            const totalPrice = quantity * pricePerDroid;
+            
+            if (totalPrice > customerCredits) {
+                return "Insufficient funds!";
+            } else {
+                return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
+            }
+        }
+
+        // Приклад виклику функції для перевірки
+        console.log(makeTransaction(3, 50, 200)); // "You ordered 3 droids worth 150 credits!"
+        console.log(makeTransaction(5, 60, 250)); // "Insufficient funds!"
+    </script>
+</body>
+</html>

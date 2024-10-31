@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перевірка функції makeArray</title>
+</head>
+<body>
+    <script>
+        function makeArray(firstArray, secondArray, maxLength) {
+            const newArray = firstArray.concat(secondArray);
+            return newArray.length > maxLength ? newArray.slice(0, maxLength) : newArray;
+        }
+
+        // Приклад виклику функції для перевірки
+        console.log(makeArray([1, 2, 3], [4, 5, 6], 5)); // [1, 2, 3, 4, 5]
+        console.log(makeArray([1, 2], [3, 4, 5], 10));   // [1, 2, 3, 4, 5]
+    </script>
+</body>
+</html>
